@@ -1,0 +1,19 @@
+_target_: src.datamodules.h5datamodule_oceanforecast.ForecastDataModule
+root_dir: ${paths.data_dir}
+scale_dir: ${paths.scale_dir}
+start_idx: 0
+end_idx: 1
+variables: [
+    "z_500", "z_850", "msl", "t2m", "u10", "v10",
+    "thetao_0.5"
+]
+out_variables: [
+    "thetao_0.5"
+]
+iter_num: 1
+seed: 1024
+batch_size: 32
+num_workers: 4
+pin_memory: true
+prefetch_factor: 2
+noise: 0
